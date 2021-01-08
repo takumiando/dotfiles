@@ -1,0 +1,6 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'dylanaraps/fff.vim'
+Plug 'previm/previm'
+
+call plug#end()
