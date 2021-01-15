@@ -68,11 +68,34 @@ zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "!"
 zstyle ':vcs_info:*' formats "%K{yellow}%F{black}%b%F{white}%c%u%f%k"
 zstyle ':vcs_info:*' actionformats "%K{magenta}%F{black}%b%F{white}%c%u%f%k"
-precmd () { vcs_info }
+
+BAT_PERCENT="/sys/class/power_supply/BAT0/capacity"
+BAT_STATUS="/sys/class/power_supply/BAT0/status"
+bat () {
+	if [ -f ${BAT_PERCENT} ]; then
+		PERCENT=$(cat ${BAT_PERCENT})
+
+		if [ -f ${BAT_STATUS} ]; then
+			STATUS=$(cat ${BAT_STATUS})
+			if [ ${STATUS} != "Discharging" ]; then
+				ICON="🔌"
+			else
+				ICON=""
+			fi
+		fi
+		echo " ${ICON}${PERCENT}%%"
+	fi
+}
+
+precmd () {
+	vcs_info
+}
+
 local git='${vcs_info_msg_0_}'
 local dir='%{%K{cyan}%}%(5~,%-2~/.../%2~,%~)%{%k%}'
-local hostname="%K{blue}${HOST}%k"
-PROMPT="%F{black}$hostname$dir%f$git
+local hostname='%K{blue}${HOST}%k'
+RPROMPT='%F{yellow}%D{%T}$(bat)%f'
+PROMPT="%F{black}${hostname}${dir}%f${git}
 %F{yellow}->%f "
 
 # ========== Environment variables ==========
