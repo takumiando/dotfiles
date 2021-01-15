@@ -73,7 +73,7 @@ local git='${vcs_info_msg_0_}'
 local dir='%{%K{cyan}%}%(5~,%-2~/.../%2~,%~)%{%k%}'
 local hostname="%K{blue}${HOST}%k"
 PROMPT="%F{black}$hostname$dir%f$git
-%F{yellow}>%f "
+%F{yellow}->%f "
 
 # ========== Environment variables ==========
 export EDITOR=/usr/bin/vim
