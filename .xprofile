@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Disable touchpad
+xinput set-prop 11 "Device Enabled" 0 &
+
+# Caps is also Ctrl
+setxkbmap -option "ctrl:nocaps" &
+
+# Start ibus-mozc
+ibus-daemon -dx &
+
+# Start compositor
+picom -b &
+
+# Set wallpaper
+nitrogen --restore &
