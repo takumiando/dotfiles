@@ -10,7 +10,7 @@ setxkbmap -option "ctrl:nocaps" &
 ibus-daemon -dx &
 
 # Start compositor
-picom -b &
+picom -bc --config ~/.picom.conf
 
 # Set wallpaper
 nitrogen --restore &
