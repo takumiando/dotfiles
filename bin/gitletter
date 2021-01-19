@@ -1,3 +1,0 @@
-#!/bin/sh
-
-git format-patch -n --cover-letter --subject-prefix="PATCH" HEAD~$1 -o patches

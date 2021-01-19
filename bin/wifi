@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+	nmcli dev wifi
+else
+	if [ $# -eq 1 ]; then
+		nmcli dev wifi connect "$1"
+	else
+		nmcli dev wifi connect "$1" password "$2"
+	fi
+fi
