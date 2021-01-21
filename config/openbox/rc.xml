@@ -360,7 +360,6 @@
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
         <command>amixer sset Master 5%-</command>
-        <command>notify-send -u low "Volume down"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -378,6 +377,26 @@
         <command>amixer sset Capture toggle</command>
       </action>
     </keybind>
+    <keybind key="A-d">
+      <action name="Execute">
+        <command>amixer sset Master 5%-</command>
+      </action>
+    </keybind>
+    <keybind key="A-u">
+      <action name="Execute">
+        <command>amixer sset Master 5%+</command>
+      </action>
+    </keybind>
+    <keybind key="A-m">
+      <action name="Execute">
+        <command>amixer sset Master toggle</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-m">
+      <action name="Execute">
+        <command>amixer sset Capture toggle</command>
+      </action>
+    </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
         <command>brightnessctl s 5%-</command>
@@ -390,12 +409,22 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot -e 'mv $f ~/Pictures/screenshots'</command>
+        <command>scrot -e 'mv $f ~/Pictures/screenshots/'</command>
       </action>
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command>scrot -s -e 'mv $f ~/Pictures/screenshots'</command>
+        <command>scrot -s -e 'mv $f ~/Pictures/screenshots/'</command>
+      </action>
+    </keybind>
+    <keybind key="A-p">
+      <action name="Execute">
+        <command>scrot -e 'mv $f ~/Pictures/screenshots/'</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-p">
+      <action name="Execute">
+        <command>scrot -s -e 'mv $f ~/Pictures/screenshots/'</command>
       </action>
     </keybind>
   </keyboard>
