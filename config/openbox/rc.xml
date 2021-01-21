@@ -344,12 +344,17 @@
     <!-- Execute commands -->
     <keybind key="A-space">
       <action name="Execute">
-        <command>dmenu_run</command>
+        <command>~/dotfiles/bin/dmenu_wal</command>
       </action>
     </keybind>
     <keybind key="A-Return">
       <action name="Execute">
         <command>st</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-f">
+      <action name="Execute">
+        <command>pcmanfm</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
@@ -385,12 +390,12 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot</command>
+        <command>scrot -e 'mv $f ~/Pictures/screenshots'</command>
       </action>
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command>scrot -s</command>
+        <command>scrot -s -e 'mv $f ~/Pictures/screenshots'</command>
       </action>
     </keybind>
   </keyboard>
