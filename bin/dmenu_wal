@@ -1,0 +1,13 @@
+#!/bin/sh
+
+HEADER="${HOME}/.cache/wal/colors-wal-dmenu.h"
+
+if [ -f ${HEADER} ]; then
+	NF=$(cat ${HEADER} | grep '#' | cut -d '"' -f 2 | head -n 1)
+	NB=$(cat ${HEADER} | grep '#' | cut -d '"' -f 4 | head -n 1)
+	SF=$(cat ${HEADER} | grep '#' | cut -d '"' -f 2 | head -n 2 | tail -n 1)
+	SB=$(cat ${HEADER} | grep '#' | cut -d '"' -f 4 | head -n 2 | tail -n 1)
+	dmenu_run -nb ${NB} -nf ${NF} -sb ${SB} -sf ${SF}
+else
+	dmenu_run
+fi
