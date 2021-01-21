@@ -8,7 +8,7 @@
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
-    <followMouse>yes</followMouse>
+    <followMouse>no</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>yes</focusLast>
     <!-- focus the last used window when changing desktops, instead of the one
@@ -40,8 +40,8 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Simply_Circles_Dark</name>
-    <titleLayout></titleLayout>
+    <name>Nightmare-03</name>
+    <titleLayout/>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -332,7 +332,7 @@
     <keybind key="A-r">
       <action name="Reconfigure">
       </action>
-      </keybind>
+    </keybind>
     <keybind key="A-S-r">
       <action name="Restart">
       </action>
@@ -723,6 +723,12 @@
       </mousebind>
     </context>
   </mouse>
+  <applications>
+    <!-- match all windows, and remove their decorations -->
+    <application class="*">
+      <decor>no</decor>
+    </application>
+  </applications>
   <menu>
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
