@@ -12,5 +12,8 @@ ibus-daemon -dx &
 # Start compositor
 picom -bc --config ~/.picom.conf
 
-# Set wallpaper
-nitrogen --restore &
+# Start file manager as a daemon
+pcmanfm -d &
+
+# Set wallpaper and color scheme
+wal -qR &
