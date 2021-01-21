@@ -128,8 +128,9 @@ alias ag='ag --color-match "39;46" --color-path "1;34" --color-line-number "1;30
 
 # Set color scheme from pywal
 if [ ${TERM} = "st-256color" ] && [ -z ${SSH_TTY} ]; then
-	if [ -f ${HOME}/.wallpaper ]; then
-		read WP < ${HOME}/.wallpaper
-		wal -q -i ${WP}
+	if [ ! -f ${HOME}/.wallpaper ]; then
+		echo ${HOME}/dotfiles/img/default.jpg > ${HOME}/.wallpaper
 	fi
+	read WP < ${HOME}/.wallpaper
+	wal -q -i ${WP}
 fi
