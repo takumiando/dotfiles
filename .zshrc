@@ -83,7 +83,7 @@ bat () {
 				ICON=""
 			fi
 		fi
-		echo " ${ICON}${PERCENT}%%"
+		echo "${ICON}${PERCENT}%%"
 	fi
 }
 
@@ -94,7 +94,7 @@ precmd () {
 local git='${vcs_info_msg_0_}'
 local dir='%{%K{cyan}%}%(5~,%-2~/.../%2~,%~)%{%k%}'
 local hostname='%K{blue}${HOST}%k'
-RPROMPT='%F{yellow}%D{%T}$(bat)%f'
+RPROMPT='%F{yellow}$(bat) %D{%T}%f'
 PROMPT="%F{black}${hostname}${dir}%f${git}
 %F{yellow}->%f "
 
