@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case $1 in
+	"up" ) OP="5%+" ;;
+	"down" ) OP="5%-" ;;
+	"mute" ) OP="toggle" ;;
+	* ) return 1 ;;
+esac
+
+STATUS=$(amixer sset Master ${OP} | grep "%" | cut -d "[" -f 2- | sed "s/]//" | head -n 1)
+dunstify -u low -h string:x-dunst-stack-tag:vol "Volume: ${STATUS}"

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export DST=${HOME}/Pictures/screenshots
+
+case $1 in
+	's' ) OPT="-s" ;;
+	'w' ) OPT="-u" ;;
+esac
+
+if [ ! -d ${DST} ]; then
+	mkdir -p ${DST}
+fi
+
+scrot ${OPT} -e 'mv $f $$DST'

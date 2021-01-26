@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case $1 in
+	"up" ) OP="5%+" ;;
+	"down" ) OP="5%-" ;;
+	* ) return 1 ;;
+esac
+
+STATUS=$(brightnessctl s ${OP} | grep "%" | cut -d "(" -f 2 | sed "s/)//")
+dunstify -u low -h string:x-dunst-stack-tag:bri "Brightness: ${STATUS}"

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+STATUS=$(amixer sset Capture toggle | grep "%" | cut -d "[" -f 3 | sed "s/]//" | head -n 1)
+dunstify -u low -h string:x-dunst-stack-tag:mic "Mic: ${STATUS}"

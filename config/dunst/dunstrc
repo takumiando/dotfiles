@@ -293,19 +293,34 @@
     frame_color = "#000000"
     foreground = "#81a2be"
     background = "#000000"
-    timeout = 10
+    timeout = 2
 
     [urgency_normal]
     frame_color = "#000000"
     foreground = "#b5bd68"
     background = "#000000"
-    timeout = 0
+    timeout = 10
 
     [urgency_critical]
     frame_color = "#000000"
     foreground = "#cc6666"
     background = "#000000"
     timeout = 0
+
+    [history-ignore-volume]
+    appname = vol
+    summary = "volume"
+    history_ignore = yes
+
+    [history-ignore-mic]
+    appname = mic
+    summary = "mic"
+    history_ignore = yes
+
+    [history-ignore-brightness]
+    appname = bri
+    summary = "brightness"
+    history_ignore = yes
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

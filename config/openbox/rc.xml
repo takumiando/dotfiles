@@ -359,72 +359,72 @@
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer sset Master 5%-</command>
+        <command>~/dotfiles/bin/vol down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer sset Master 5%+</command>
+        <command>~/dotfiles/bin/vol up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>amixer sset Master toggle</command>
+        <command>~/dotfiles/bin/vol mute</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMicMute">
       <action name="Execute">
-        <command>amixer sset Capture toggle</command>
+        <command>~/dotfiles/bin/mic</command>
       </action>
     </keybind>
     <keybind key="A-d">
       <action name="Execute">
-        <command>amixer sset Master 5%-</command>
+        <command>~/dotfiles/bin/vol down</command>
       </action>
     </keybind>
     <keybind key="A-u">
       <action name="Execute">
-        <command>amixer sset Master 5%+</command>
+        <command>~/dotfiles/bin/vol up</command>
       </action>
     </keybind>
     <keybind key="A-m">
       <action name="Execute">
-        <command>amixer sset Master toggle</command>
+        <command>~/dotfiles/bin/vol mute</command>
       </action>
     </keybind>
     <keybind key="A-S-m">
       <action name="Execute">
-        <command>amixer sset Capture toggle</command>
+        <command>~/dotfiles/bin/mic</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>brightnessctl s 5%-</command>
+        <command>~/dotfiles/bin/bri up</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>brightnessctl s 5%+</command>
+        <command>~/dotfiles/bin/bri down</command>
       </action>
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot -e 'mv $f ~/Pictures/screenshots/'</command>
+        <command>~/dotfiles/bin/scr</command>
       </action>
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command>scrot -s -e 'mv $f ~/Pictures/screenshots/'</command>
+        <command>~/dotfiles/bin/scr s</command>
       </action>
     </keybind>
     <keybind key="A-p">
       <action name="Execute">
-        <command>scrot -e 'mv $f ~/Pictures/screenshots/'</command>
+        <command>~/dotfiles/bin/scr</command>
       </action>
     </keybind>
     <keybind key="A-S-p">
       <action name="Execute">
-        <command>scrot -s -e 'mv $f ~/Pictures/screenshots/'</command>
+        <command>~/dotfiles/bin/scr s</command>
       </action>
     </keybind>
   </keyboard>
