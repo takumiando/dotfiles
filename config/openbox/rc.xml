@@ -399,12 +399,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>~/dotfiles/bin/bri up</command>
+        <command>~/dotfiles/bin/bri down</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>~/dotfiles/bin/bri down</command>
+        <command>~/dotfiles/bin/bri up</command>
       </action>
     </keybind>
     <keybind key="Print">
