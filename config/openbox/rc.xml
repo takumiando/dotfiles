@@ -151,13 +151,13 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
-    <left>0</left>
-    <right>0</right>
+    <top>10</top>
+    <bottom>45</bottom>
+    <left>10</left>
+    <right>10</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Bottom</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>

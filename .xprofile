@@ -17,3 +17,6 @@ pcmanfm -d &
 
 # Set wallpaper and color scheme
 wal -qR &
+
+# Start polybar
+~/dotfiles/bin/polybar-wal &

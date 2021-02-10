@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -f ${HOME}/.wallpaper ]; then
+	echo ${HOME}/dotfiles/img/default.jpg > ${HOME}/.wallpaper
+fi
+read WP < ${HOME}/.wallpaper
+
+wal -q -i ${WP} --backend colorthief
