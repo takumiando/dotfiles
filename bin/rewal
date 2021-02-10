@@ -5,4 +5,4 @@ if [ ! -f ${HOME}/.wallpaper ]; then
 fi
 read WP < ${HOME}/.wallpaper
 
-wal -q -i ${WP} --backend colorthief
+wal -i ${WP} --backend colorthief
