@@ -344,7 +344,7 @@
     <!-- Execute commands -->
     <keybind key="A-space">
       <action name="Execute">
-        <command>~/dotfiles/bin/dmenu_wal</command>
+        <command>~/dotfiles/bin/dmenu-wal</command>
       </action>
     </keybind>
     <keybind key="A-Return">
