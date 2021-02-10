@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Disable touchpad
 xinput set-prop 11 "Device Enabled" 0 &
 
@@ -19,4 +17,4 @@ pcmanfm -d &
 wal -qR &
 
 # Start polybar
-~/dotfiles/bin/polybar-wal &
+${HOME}/dotfiles/bin/polybar-wal &
