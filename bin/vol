@@ -1,8 +1,12 @@
 #!/bin/sh
 
 case $1 in
-	"up" ) OP="5%+" ;;
-	"down" ) OP="5%-" ;;
+	"up" ) OP="5%+"
+		amixer sset Master on 2> /dev/null
+		;;
+	"down" ) OP="5%-"
+		amixer sset Master on 2> /dev/null
+		;;
 	"mute" ) OP="toggle" ;;
 	* ) return 1 ;;
 esac
