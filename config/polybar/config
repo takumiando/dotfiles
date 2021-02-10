@@ -5,6 +5,8 @@ modules-right = alsa battery
 fixed-center = true
 module-margin-left = 1
 module-margin-right = 1
+padding-left = 2
+padding-right = 2
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -36,8 +38,8 @@ adapter = AC
 full-at = 100
 format-charging = <label-charging>
 format-discharging = <label-discharging>
-label-charging = "🔌 %percentage%% "
-label-discharging = "%percentage%% "
+label-charging = 🔌 %percentage%%
+label-discharging = %percentage%%
 
 [module/alsa]
 type = internal/alsa
