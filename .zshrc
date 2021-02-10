@@ -66,8 +66,8 @@ setopt prompt_subst
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr "+"
 zstyle ':vcs_info:*' unstagedstr "!"
-zstyle ':vcs_info:*' formats "%K{yellow}%F{black}%b%F{white}%c%u%f%k"
-zstyle ':vcs_info:*' actionformats "%K{magenta}%F{black}%b%F{white}%c%u%f%k"
+zstyle ':vcs_info:*' formats "%K{yellow}%F{black}%b%c%u%f%k"
+zstyle ':vcs_info:*' actionformats "%K{magenta}%F{black}%b%c%u%f%k"
 
 precmd () {
 	vcs_info
