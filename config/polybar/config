@@ -1,4 +1,5 @@
 [bar/bar]
+modules-left = workspaces
 modules-center = date
 modules-right = battery
 
@@ -24,8 +25,8 @@ adapter = AC
 full-at = 100
 format-charging = <label-charging>
 format-discharging = <label-discharging>
-label-charging = 🔌 %percentage%%
-label-discharging = %percentage%%
+label-charging = "🔌 %percentage%% "
+label-discharging = "%percentage%% "
 
 [colors]
 background = ${xrdb:color0:#222}
@@ -34,3 +35,31 @@ foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
+icon-0 = 1;💻
+icon-1 = 2;🌐
+icon-2 = 3;🗨
+icon-3 = 4;👽
+icon-default =
+format = <label-state>
+label-monitor = %index%
+label-active = %index%
+label-occupied = %index%
+label-urgent = %index%
+label-empty = %index%
+label-occupied-padding = 1
+label-empty-padding = 1
+label-urgent-padding = 1
+label-active-padding = 1
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.primary}
+label-active-underline = ${colors.foreground}
+label-occupied-underline = ${colors.foreground}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-underline = ${colors.foreground}
+label-empty-foreground = ${colors.foreground}
