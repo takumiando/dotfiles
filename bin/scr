@@ -11,4 +11,4 @@ if [ ! -d ${DST} ]; then
 	mkdir -p ${DST}
 fi
 
-scrot ${OPT} -e 'mv $f $$DST'
+scrot ${OPT} -z -e 'mv $f $$DST'
