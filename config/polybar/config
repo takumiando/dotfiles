@@ -10,7 +10,7 @@ padding-right = 2
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-font-0 = Inconsolata:size=10
+font-0 = Terminus:size=12
 font-1 = Symbola:size=10
 
 width = 50%
@@ -50,7 +50,7 @@ ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
 ramp-volume-2 = 🔊
 label-muted = 🔇 ────
-bar-volume-width = 5
+bar-volume-width = 10
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 0
