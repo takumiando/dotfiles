@@ -400,7 +400,7 @@
     </keybind>
     <keybind key="A-S-f">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">

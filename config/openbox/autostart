@@ -11,7 +11,7 @@ ibus-daemon -dx &
 picom -bc --config ~/.picom.conf
 
 # Start file manager as a daemon
-pcmanfm -d &
+thunar --daemon &
 
 # Set wallpaper and color scheme
 wal -qR &
