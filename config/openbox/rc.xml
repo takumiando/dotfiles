@@ -312,8 +312,10 @@
       </action>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="S-A-q">
-      <action name="Close"/>
+    <keybind key="A-q">
+      <keybind key="A-q">
+        <action name="Close"/>
+      </keybind>
     </keybind>
     <keybind key="A-Escape">
       <action name="Lower"/>
