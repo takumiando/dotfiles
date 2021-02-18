@@ -465,6 +465,11 @@
         <command>~/dotfiles/bin/scr s</command>
       </action>
     </keybind>
+    <keybind key="C-Print">
+      <action name="Execute">
+        <command>~/dotfiles/bin/scr w</command>
+      </action>
+    </keybind>
     <keybind key="A-p">
       <action name="Execute">
         <command>~/dotfiles/bin/scr</command>
@@ -473,6 +478,11 @@
     <keybind key="A-S-p">
       <action name="Execute">
         <command>~/dotfiles/bin/scr s</command>
+      </action>
+    </keybind>
+    <keybind key="A-C-p">
+      <action name="Execute">
+        <command>~/dotfiles/bin/scr w</command>
       </action>
     </keybind>
   </keyboard>
