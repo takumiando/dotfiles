@@ -1,5 +1,12 @@
 # Disable touchpad
-xinput set-prop 11 "Device Enabled" 0 &
+LIST='TM3381-002'
+for NAME in $LIST
+do
+	NUM=$(xinput | grep $NAME | cut -d '=' -f 2 | cut -d '[' -f 1)
+	if [ $NUM != '' ]; then
+		xinput set-prop $NUM "Device Enabled" 0 &
+	fi
+done
 
 # Caps is also Ctrl
 setxkbmap -option "ctrl:nocaps" &
