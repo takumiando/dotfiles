@@ -1,5 +1,5 @@
 # Disable touchpad
-LIST='TM3381-002'
+LIST='TM3381-002 Touchpad'
 for NAME in $LIST
 do
 	NUM=$(xinput | grep $NAME | cut -d '=' -f 2 | cut -d '[' -f 1)
