@@ -1,5 +1,6 @@
-"" load dein.vim setting
+"" load plug setting
 source ~/.vim-plug
+colorscheme wal
 
 "" tmux setting 
 augroup titlesettings
