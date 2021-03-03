@@ -40,6 +40,8 @@ set history=10000
 
 set helplang=jp
 
+highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+
 imap <C-j> <esc>
 imap <C-f> <C-x><C-o>
 imap <C-w> <C-p>
