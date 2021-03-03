@@ -1,4 +1,4 @@
-. /etc/bash_completion
+. /usr/share/bash-completion/bash_completion
 
 shopt -s histappend
 
