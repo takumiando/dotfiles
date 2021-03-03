@@ -154,3 +154,9 @@ ps_git () {
 
 PS1='$(ps_host)$(ps_pwd)$(ps_git)
 > '
+
+if [ ${TERM} = "st-256color" ] && [ -z ${SSH_TTY} ]; then
+	if [ -f ${HOME}/.cache/wal/sequences ]; then
+		cat ${HOME}/.cache/wal/sequences
+	fi
+fi
