@@ -64,6 +64,7 @@ local PS1_CHAR='%F{yellow}> %f'
 
 PS1="${PS1_HOST}${PS1_PWD}${PS1_GIT}
 ${PS1_CHAR}"
+PS2='> '
 
 case ${OSTYPE} in
 	darwin*)
