@@ -54,12 +54,12 @@ bindkey '^Z' fancy-ctrl-z
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:*' unstagedstr '!'
-zstyle ':vcs_info:*' formats "%K{yellow}%F{black}%b$(blink %c%u)%f%k"
-zstyle ':vcs_info:*' actionformats "%K{yellow}%F{black}$(blink %b%c%u)%f%k"
+zstyle ':vcs_info:*' formats "%b$(blink %c%u)"
+zstyle ':vcs_info:*' actionformats "$(blink %b%c%u)"
 
 local PS1_HOST='%K{blue}%F{black}$HOST%f%k'
 local PS1_PWD='%{%K{cyan}%F{black}%}%(5~,%-2~/.../%2~,%~)%{%f%k%}'
-local PS1_GIT='$vcs_info_msg_0_'
+local PS1_GIT='%K{yellow}%F{black}${vcs_info_msg_0_}%f%k'
 local PS1_CHAR='%F{yellow}> %f'
 
 PS1="${PS1_HOST}${PS1_PWD}${PS1_GIT}
