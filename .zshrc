@@ -1,3 +1,10 @@
+#                __
+#    ____  _____/ /_  __________
+#   /_  / / ___/ __ \/ ___/ ___/
+#  _ / /_(__  ) / / / /  / /__
+# (_)___/____/_/ /_/_/   \___/
+#
+
 autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
