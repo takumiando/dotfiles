@@ -13,11 +13,11 @@ foreground = ${colors.foreground}
 font-0 = Terminus:size=12
 font-1 = Symbola:size=10
 
-width = 50%
+width = 100%
 height = 30
 bottom = true
-offset-x = 25%
-offset-y = 10
+offset-x = 0
+offset-y = 0
 
 [colors]
 background = ${xrdb:color0:#222}
