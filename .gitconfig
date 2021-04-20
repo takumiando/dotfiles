@@ -19,8 +19,6 @@
 	frag = black yellow
 	old = magenta bold
 	new = blue bold
-[sendemail]
-	smtpserver = sv-prius
 [diff]
 	tool = vimdiff
 [difftool]
