@@ -6,13 +6,15 @@ case $(uname) in
 		export PATH=$PATH:/opt/homebrew/bin
 		;;
 	Linux )
-		DIST=$(cat /etc/*-release | grep "^NAME=" | cut -d '=' -f 2 | tr -d '"')
+		DIST=$(cat /etc/*-release | grep "^ID=" | cut -d '=' -f 2)
 		case $DIST in
-			Debian* )
+			debian )
 				export DEBEMAIL="t-ando@advaly.co.jp"
 				export DEBFULLNAME="Takumi Ando"
 				;;
-			Arch* )
+			arch )
+				;;
+			* )
 				;;
 		esac
 		;;
