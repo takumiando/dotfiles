@@ -3,7 +3,7 @@ LIST='TM3381-002 Touchpad'
 for NAME in $LIST
 do
 	NUM=$(xinput | grep $NAME | cut -d '=' -f 2 | cut -d '[' -f 1)
-	if [ $NUM != '' ]; then
+	if [ ! $NUM = '' ]; then
 		xinput set-prop $NUM "Device Enabled" 0 &
 	fi
 done
@@ -11,8 +11,8 @@ done
 # Caps is also Ctrl
 setxkbmap -option "ctrl:nocaps" &
 
-# Start ibus-mozc
-ibus-daemon -dx &
+# Start fcitx-mozc
+fcitx-autostart &
 
 # Start compositor
 picom -bc --config ~/.picom.conf
