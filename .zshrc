@@ -25,7 +25,6 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000000
 SAVEHIST=10000000
-EDITOR=/usr/bin/vim
 LESS=-R
 
 precmd () {
@@ -75,11 +74,11 @@ PS1="${PS1_HOST}${PS1_PWD}${PS1_GIT}
 ${PS1_CHAR}"
 PS2='> '
 
-case ${OSTYPE} in
-	darwin*)
+case $(uname) in
+	Darwin)
 		alias ls='ls -FG'
 		;;
-	linux*)
+	Linux)
 		alias ls='ls --color -F'
 		;;
 esac
