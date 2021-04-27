@@ -12,16 +12,17 @@ augroup END
 
 set number
 set cursorline
-""set cursorcolumn
 set ruler
 set autoindent
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 set encoding =utf-8
 set cindent
 
 set list
-set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮
+set listchars=tab:▸\ ,trail:▒,extends:❯,precedes:❮
 
 set ignorecase
 set smartcase
@@ -54,9 +55,12 @@ nnoremap <S-s> :rv!<CR>
 
 augroup fileTypeIndent
 	autocmd!
-	autocmd BufNewFile,BufRead *.py setlocal expandtab softtabstop=2 tabstop=4 shiftwidth=4
-	autocmd BufNewFile,BufRead *.html setlocal expandtab softtabstop=2 tabstop=2 shiftwidth=2
-	autocmd BufNewFile,BufRead *.js setlocal expandtab softtabstop=2 tabstop=4 shiftwidth=4
+	autocmd BufNewFile,BufRead *.c set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab softtabstop=0
+	autocmd BufNewFile,BufRead *.py set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+	autocmd BufNewFile,BufRead *.html set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+	autocmd BufNewFile,BufRead *.js set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+	autocmd BufNewFile,BufRead *.sh set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+	autocmd BufNewFile,BufRead * nested if @% !~ '\.' && getline(1) !~ '^#!.*sh' | set tabstop=4 shiftwidth=4 softtabstop=4 expandtab filetype=sh | endif
 augroup END
 
 nnoremap <silent> <C-m> :PrevimOpen<CR>
