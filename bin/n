@@ -1,3 +1,15 @@
 #!/bin/sh
 
-printf '%s\n' "$(date "+%d/%m/%y %T"): $*" >> ~/notes
+NOTES=~/notes
+
+note () {
+	printf '%s\n' "$(date "+%Y/%m/%d %T") $*" >> $NOTES
+}
+
+if [ -p /dev/stdin ]; then
+	note $(cat -)
+elif [ $# -ne 0 ]; then
+	note $*
+else
+	cat $NOTES
+fi
