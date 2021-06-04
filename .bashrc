@@ -1,4 +1,7 @@
 . /usr/share/bash-completion/bash_completion
+if [ $? -ne 0 ]; then
+	return
+fi
 
 shopt -s histappend
 
